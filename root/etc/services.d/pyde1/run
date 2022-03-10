@@ -1,0 +1,7 @@
+#!/usr/bin/with-contenv bash
+PROGRAM_ARG_LIST=-c /config/pyde1.conf
+PYDE1_PATH=/home/pyde1/deploy/pyde1-devel/src/pyDE1
+SEARCH_DIR=/var/lib/pyde1
+SUFFIX=.btid
+exec \
+	s6-setuidgid abc python3 ${PYDE1_PATH}/run.py

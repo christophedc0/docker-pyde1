@@ -1,0 +1,49 @@
+server {
+    listen 443 ssl http2;
+    listen [::]:443 ssl http2;
+    server_name www.example.com;
+
+    root /var/www/html;
+
+    # Do not cache while doing development
+    # http://nginx.org/en/docs/http/ngx_http_headers_module.html#expires
+    # https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control
+    expires   0;
+
+    # This seems to work, but not ^~
+    location ~ /\. {
+        return 404;
+    }
+
+    location / {
+        index  index.html index.htm;
+    }
+
+    location /favicon.ico {
+        log_not_found off;
+    }
+
+    location /pyde1/ {
+        proxy_pass http://127.0.0.1:1234/ ;
+    }
+
+    location /de1-plot/ws {
+        proxy_pass http://127.0.0.1:1884/ ;
+    }
+
+    # http://nginx.org/en/docs/http/ngx_http_rewrite_module.html#set
+
+    location /de1-plot/db/ {
+
+        # The "obvious" doesn't work
+        # rewrite /de1-plot/db/(.*) /$1 break;
+
+        include uwsgi_params;
+        set $rewritten_uri $request_uri;
+        if ($request_uri ~ /de1-plot/db/(.*)) {
+            set $rewritten_uri /$1;
+        }
+        uwsgi_param REQUEST_URI $rewritten_uri;
+        uwsgi_pass unix:///tmp/uwsgi-pyde1-db.sock;
+    }
+}

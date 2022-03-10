@@ -1,0 +1,6 @@
+#!/usr/bin/with-contenv bash
+PROGRAM_ARG_LIST=-c /config/pyde1-visualizer.conf
+PYDE1_PATH=/home/pyde1/deploy/pyde1-devel/src/pyDE1
+exec \
+	s6-setuidgid abc python3 \
+        ${PYDE1_PATH}/services/runnable/pyde1-visualizer.py

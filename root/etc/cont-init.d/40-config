@@ -1,0 +1,18 @@
+#!/usr/bin/with-contenv bash
+
+# copy default config files if not exists
+[[ ! -e /config/ngnix/gzip.conf ]] && \
+	cp -R /defaults/gzip.conf /config/ngnix/
+[[ ! -e /config/ngnix/logging.conf ]] && \
+	cp -R /defaults/logging.conf /config/ngnix/
+[[ ! -e /config/ngnix/nginx.conf ]] && \
+	cp -R /defaults/nginx.conf /config/ngnix/
+[[ ! -e /config/ngnix/site-confs/default.conf ]] && \
+	cp -R /defaults/pyde1 /config/ngnix/site-confs/default.conf
+[[ ! -e /config/ngnix/reverse_proxy.conf ]] && \
+	cp -R /defaults/reverse_proxy.conf /config/ngnix/
+
+# create pyde1 log folders
+mkdir -p \
+    /config/log/pyde1
+	/var/lib/pyde1
