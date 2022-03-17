@@ -1,18 +1,45 @@
 #!/usr/bin/with-contenv bash
 
-# copy default config files if not exists
-[[ ! -e /config/ngnix/gzip.conf ]] && \
-	cp -R /defaults/gzip.conf /config/ngnix/
-[[ ! -e /config/ngnix/logging.conf ]] && \
-	cp -R /defaults/logging.conf /config/ngnix/
-[[ ! -e /config/ngnix/nginx.conf ]] && \
-	cp -R /defaults/nginx.conf /config/ngnix/
-[[ ! -e /config/ngnix/site-confs/default.conf ]] && \
-	cp -R /defaults/pyde1 /config/ngnix/site-confs/default.conf
-[[ ! -e /config/ngnix/reverse_proxy.conf ]] && \
-	cp -R /defaults/reverse_proxy.conf /config/ngnix/
-
-# create pyde1 log folders
+# create  folders
 mkdir -p \
-    /config/log/pyde1
+    /config/log/pyde1 \
+	/config/pyde1 \
+	/config/mqtt \
 	/var/lib/pyde1
+
+# clean up default files
+rm -rf /config/nginx/server-confs/ssl.conf.sample
+rm -rf /config/nginx/site-confs/default.conf
+rm -rf /config/nginx/site-confs/default.conf.sample
+rm -rf /config/nginx/nginx.conf.sample
+
+# copy default config files for nginx if not exists
+[[ ! -e /config/nginx/gzip.conf ]] && \
+	cp -R /defaults/gzip.conf /config/nginx/
+[[ ! -e /config/nginx/logging.conf ]] && \
+	cp -R /defaults/logging.conf /config/nginx/
+[[ ! -e /config/nginx/nginx.conf ]] && \
+	cp -R /defaults/nginx.conf /config/nginx/
+[[ ! -e /config/nginx/pyde1 ]] && \
+	cp -R /defaults/pyde1 /config/nginx/site-confs/
+[[ ! -e /config/nginx/reverse_proxy.conf ]] && \
+	cp -R /defaults/reverse_proxy.conf /config/nginx/
+
+# copy default config files for mqtt if not exists
+[[ ! -e /config/mqtt/listeners.conf ]] && \
+	cp -R /defaults/listeners.conf /config/mqtt/
+[[ ! -e /config/mqtt/acls ]] && \
+	cp -R /defaults/acls /config/mqtt/
+[[ ! -e /config/mqtt/auth.conf ]] && \
+	cp -R /defaults/auth.conf /config/mqtt/
+
+# copy default config files for pyde1 if not exists
+[[ ! -e /config/pyde1/pyde1.conf ]] && \
+	cp -R /defaults/pyde1.conf /config/pyde1/
+[[ ! -e /config/pyde1/pyde1-visualizer.conf ]] && \
+	cp -R /defaults/pyde1-visualizer.conf /config/pyde1/
+
+# set permission
+chown -R abc:abc \
+	/config/log/pyde1 \
+	/config/pyde1
