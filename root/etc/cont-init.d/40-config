@@ -32,6 +32,8 @@ rm -rf /config/nginx/nginx.conf.sample
 	cp -R /defaults/acls /config/mqtt/
 [[ ! -e /config/mqtt/auth.conf ]] && \
 	cp -R /defaults/auth.conf /config/mqtt/
+[[ ! -e /config/mqtt/logging.conf ]] && \
+	cp -R /defaults/mqtt_logging.conf /config/mqtt/logging.conf
 
 # copy default config files for pyde1 if not exists
 [[ ! -e /config/pyde1/pyde1.conf ]] && \
