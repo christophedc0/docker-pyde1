@@ -1,4 +1,4 @@
 #!/usr/bin/with-contenv bash
 
-exec \
-	s6-setuidgid abc /usr/sbin/mosquitto -d
+#exec \
+#	s6-setuidgid abc /usr/sbin/mosquitto -d

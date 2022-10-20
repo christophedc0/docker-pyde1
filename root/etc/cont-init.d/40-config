@@ -4,7 +4,6 @@
 mkdir -p \
     /config/log/pyde1 \
 	/config/pyde1 \
-	/config/mqtt \
 	/var/lib/pyde1
 
 # clean up default files
@@ -25,21 +24,21 @@ rm -rf /config/nginx/nginx.conf.sample
 [[ ! -e /config/nginx/reverse_proxy.conf ]] && \
 	cp -R /defaults/reverse_proxy.conf /config/nginx/
 
-# copy default config files for mqtt if not exists
-[[ ! -e /config/mqtt/listeners.conf ]] && \
-	cp -R /defaults/listeners.conf /config/mqtt/
-[[ ! -e /config/mqtt/acls ]] && \
-	cp -R /defaults/acls /config/mqtt/
-[[ ! -e /config/mqtt/auth.conf ]] && \
-	cp -R /defaults/auth.conf /config/mqtt/
-[[ ! -e /config/mqtt/logging.conf ]] && \
-	cp -R /defaults/mqtt_logging.conf /config/mqtt/logging.conf
+# # copy default config files for mqtt if not exists
+# [[ ! -e /config/mqtt/listeners.conf ]] && \
+# 	cp -R /defaults/listeners.conf /config/mqtt/
+# [[ ! -e /config/mqtt/acls ]] && \
+# 	cp -R /defaults/acls /config/mqtt/
+# [[ ! -e /config/mqtt/auth.conf ]] && \
+# 	cp -R /defaults/auth.conf /config/mqtt/
+# [[ ! -e /config/mqtt/logging.conf ]] && \
+# 	cp -R /defaults/mqtt_logging.conf /config/mqtt/logging.conf
 
-# copy default config files for pyde1 if not exists
-[[ ! -e /config/pyde1/pyde1.conf ]] && \
-	cp -R /defaults/pyde1.conf /config/pyde1/
-[[ ! -e /config/pyde1/pyde1-visualizer.conf ]] && \
-	cp -R /defaults/pyde1-visualizer.conf /config/pyde1/
+# # copy default config files for pyde1 if not exists
+# [[ ! -e /config/pyde1/pyde1.conf ]] && \
+# 	cp -R /defaults/pyde1.conf /config/pyde1/
+# [[ ! -e /config/pyde1/pyde1-visualizer.conf ]] && \
+# 	cp -R /defaults/pyde1-visualizer.conf /config/pyde1/
 
 # set permission
 chown -R abc:abc \

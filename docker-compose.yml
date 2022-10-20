@@ -2,8 +2,7 @@ version: "3"
 
 networks:
   default:
-    driver:
-      - bridge
+    driver: bridge
 
 services:
   pyde1:
@@ -12,18 +11,20 @@ services:
       - "80:80"
       - "443:443"
     devices:
-      - "/dev/ttyAMA0/hci0:/dev/ttyAMA0/hci0"
+      - "/dev/ttyAMA0:/dev/ttyAMA0"
     environment:
       TZ:
         "Europe/Brussels"
+    links: 
+      - mosquitto
     networks:
       default:
         aliases:
           - pyde1.local
   mosquitto:
-    image: eclipse-mnosquitto
+    image: eclipse-mosquitto
     volumes:
-      - "./config/mosquitto:/mosquitto"
+      - "./config/mosquitto:/mosquitto/config"
     ports:
       - "1883:1883"
       - "9001:9001"

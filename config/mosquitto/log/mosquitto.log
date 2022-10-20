@@ -1,0 +1,6 @@
+1666288973: mosquitto version 2.0.15 starting
+1666288973: Config loaded from /mosquitto/config/mosquitto.conf.
+1666288973: Opening websockets listen socket on port 1883.
+1666288973: mosquitto version 2.0.15 running
+1666288982: mosquitto version 2.0.15 terminating
+1666288982: Saving in-memory database to /mosquitto/config/data/mosquitto.db.
