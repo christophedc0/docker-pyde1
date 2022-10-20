@@ -14,7 +14,8 @@ services:
     devices:
       - "/dev/ttyAMA0/hci0:/dev/ttyAMA0/hci0"
     environment:
-      - TZ="Europe/Brussels"
+      TZ:
+        "Europe/Brussels"
     networks:
       default:
         aliases:
@@ -25,9 +26,8 @@ services:
       - "./config/mosquitto:/mosquitto"
     ports:
       - "1883:1883"
-      - "9001:9001:
+      - "9001:9001"
     networks:
       default:
         aliases:
           - mosquitto.local
-  
