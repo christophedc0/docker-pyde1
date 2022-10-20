@@ -8,7 +8,7 @@ LABEL maintainer="tobbenb"
 
 # environment settings
 ENV \
-  PIPFLAGS="--no-cache-dir --find-links https://wheel-index.linuxserver.io/alpine/ --find-links https://wheel-index.linuxserver.io/homeassistant/"
+  PIPFLAGS="--no-cache-dir --find-links https://wheel-index.linuxserver.io/alpine/"
 
 # install packages
 RUN \
@@ -21,8 +21,8 @@ RUN \
   apk add --no-cache --upgrade \
     bluez \
     dbus \
-    mosquitto \
-    mosquitto-clients && \
+#    mosquitto \
+#    mosquitto-clients && \
   echo "**** adding abc to bluetooth group ****" && \
   usermod -a -G lp abc && \
   echo "**** installing pyde1 ****" && \
@@ -30,8 +30,8 @@ RUN \
     pyDE1 && \
   /usr/bin/python3 -c \
     'import importlib.resources ; print(importlib.resources.files("pyDE1"))' && \
-  echo "**** adding config folder for mqtt ****" && \
-  echo 'include_dir /config/mqtt' >> /etc/mosquitto/mosquitto.conf
+#  echo "**** adding config folder for mqtt ****" && \
+#  echo 'include_dir /config/mqtt' >> /etc/mosquitto/mosquitto.conf
 
 # copy local files
 COPY root/ /
