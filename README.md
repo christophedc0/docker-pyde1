@@ -1,5 +1,5 @@
 # docker-pyde1
-Docker container for PyDE1
+Docker compose for PyDE1, mosquitto and nginx.
 
 This is under continous development.
 
