@@ -7,6 +7,8 @@ If it breaks, it breaks.
 
 I didn't even create a dev branch, so I think this should ring some bells.
 
+A lot of credit to Jeff D and Tobben B, for the base of all this.
+
 ## TODO
  1. Check why pyde1 mqtt user gets DENIED when writing to pyDE1/#
  2. Is bluetooth even working ?
