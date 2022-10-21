@@ -1,12 +1,17 @@
 version: "3"
 
 networks:
-  default:
+  pyde1:
     driver: bridge
 
 services:
   pyde1:
     build: .
+    container_name: pyde1
+    volumes:
+      - "./config/pyde1/logs:/pyde1/logs"
+      - "./config/pyde1/pyde1.conf:/config/pyde1/pyde1.conf"
+      - "./config/pyde1/pyde1-visualizer.conf:/config/pyde1/pyde1-visualizer.conf"
     ports:
       - "80:80"
       - "443:443"
@@ -18,17 +23,20 @@ services:
     links: 
       - mosquitto
     networks:
-      default:
+      pyde1:
         aliases:
-          - pyde1.local
+          - pyde1
   mosquitto:
     image: eclipse-mosquitto
+    container_name: mosquitto
     volumes:
-      - "./config/mosquitto:/mosquitto/config"
+      - ./config/mosquitto:/mosquitto/config
     ports:
-      - "1883:1883"
-      - "9001:9001"
-    networks:
-      default:
+      - 1883:1883
+      - 9001:9001
+    environment:
+      - TZ=Europe/Brussels
+    networks: 
+      pyde1:
         aliases:
-          - mosquitto.local
+          - mosquitto

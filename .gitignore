@@ -1,3 +1,7 @@
+# data & logs
+config/mosquitto/logs
+config/mosquitto/data
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db

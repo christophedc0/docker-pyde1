@@ -34,8 +34,8 @@ RUN \
 #  echo 'include_dir /config/mqtt' >> /etc/mosquitto/mosquitto.conf
 
 # copy local files
-COPY root/ /
+COPY root/etc /etc
 
 # ports and volumes
 EXPOSE 80 443
-VOLUME /config
+#VOLUME /config
