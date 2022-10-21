@@ -13,16 +13,16 @@ rm -rf /config/nginx/site-confs/default.conf.sample
 rm -rf /config/nginx/nginx.conf.sample
 
 # copy default config files for nginx if not exists
-[[ ! -e /config/nginx/gzip.conf ]] && \
-	cp -R /defaults/gzip.conf /config/nginx/
-[[ ! -e /config/nginx/logging.conf ]] && \
-	cp -R /defaults/logging.conf /config/nginx/
-[[ ! -e /config/nginx/nginx.conf ]] && \
-	cp -R /defaults/nginx.conf /config/nginx/
-[[ ! -e /config/nginx/pyde1 ]] && \
-	cp -R /defaults/pyde1 /config/nginx/site-confs/
-[[ ! -e /config/nginx/reverse_proxy.conf ]] && \
-	cp -R /defaults/reverse_proxy.conf /config/nginx/
+#[[ ! -e /config/nginx/gzip.conf ]] && \
+# 	cp -R /defaults/gzip.conf /config/nginx/
+# [[ ! -e /config/nginx/logging.conf ]] && \
+# 	cp -R /defaults/logging.conf /config/nginx/
+# [[ ! -e /config/nginx/nginx.conf ]] && \
+# 	cp -R /defaults/nginx.conf /config/nginx/
+# [[ ! -e /config/nginx/pyde1 ]] && \
+# 	cp -R /defaults/pyde1 /config/nginx/site-confs/
+# [[ ! -e /config/nginx/reverse_proxy.conf ]] && \
+# 	cp -R /defaults/reverse_proxy.conf /config/nginx/
 
 # # copy default config files for mqtt if not exists
 # [[ ! -e /config/mqtt/listeners.conf ]] && \

@@ -5,16 +5,37 @@ networks:
     driver: bridge
 
 services:
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    volumes:
+      - "./config/nginx/nginx.conf:/etc/nginx/nginx.conf:ro"
+      - "./config/nginx/gzip.conf:/etc/nginx/gzip.conf:ro"
+      - "./config/nginx/logging.conf:/etc/nginx/logging.conf:ro"
+      - "./config/nginx/pyde1:/etc/nginx/site-confs/pyde1:ro"
+      - "./config/nginx/reverse_proxy.conf:/etc/nginx/reverse_proxy.conf:ro"
+      - "./config/nginx/logs/:/etc/nginx/logs"
+    ports:
+      - "80:80"
+      - "443:443"
+      - "1234:1234"
+    environment:
+      TZ:
+        "Europe/Brussels"
+    links: 
+      - pyde1
+    networks:
+      pyde1:
+        aliases:
+          - nginx
+
   pyde1:
     build: .
     container_name: pyde1
     volumes:
       - "./config/pyde1/logs:/pyde1/logs"
-      - "./config/pyde1/pyde1.conf:/config/pyde1/pyde1.conf"
-      - "./config/pyde1/pyde1-visualizer.conf:/config/pyde1/pyde1-visualizer.conf"
-    ports:
-      - "80:80"
-      - "443:443"
+      - "./config/pyde1/pyde1.conf:/config/pyde1/pyde1.conf:ro"
+      - "./config/pyde1/pyde1-visualizer.conf:/config/pyde1/pyde1-visualizer.conf:ro"
     devices:
       - "/dev/ttyAMA0:/dev/ttyAMA0"
     environment:
@@ -26,17 +47,17 @@ services:
       pyde1:
         aliases:
           - pyde1
+
   mosquitto:
     image: eclipse-mosquitto
     container_name: mosquitto
     volumes:
-      - ./config/mosquitto:/mosquitto/config
+      - "./config/mosquitto:/mosquitto/config"
     ports:
-      - 1883:1883
-      - 9001:9001
-    environment:
-      - TZ=Europe/Brussels
-    networks: 
+      - "1883:1883"
+      - "1884:1884"
+      - "9001:9001"
+    networks:
       pyde1:
         aliases:
           - mosquitto

@@ -33,4 +33,4 @@ RUN \
 COPY root/etc /etc
 
 # ports and volumes
-EXPOSE 80 443
+#EXPOSE 80 443
