@@ -30,8 +30,7 @@ RUN \
     'import importlib.resources ; print(importlib.resources.files("pyDE1"))'
 
 # copy local files
-COPY root/ /
+COPY root/etc /etc
 
 # ports and volumes
 EXPOSE 80 443
-VOLUME /config
