@@ -1,6 +1,8 @@
 # data & logs
-config/mosquitto/logs
+config/mosquitto/log
 config/mosquitto/data
+config/nginx/logs/nginx
+config/pyde1/logs
 
 # Windows image file caches
 Thumbs.db
