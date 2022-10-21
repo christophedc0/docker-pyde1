@@ -4360,3 +4360,153 @@
 2022-10-21T15:09:49: Received DISCONNECT from pyde1@74b72b8d0eb5[139]
 2022-10-21T15:09:49: Client pyde1@74b72b8d0eb5[139] disconnected.
 2022-10-21T15:09:55: mosquitto version 2.0.15 terminating
+2022-10-21T15:12:47: mosquitto version 2.0.15 starting
+2022-10-21T15:12:47: Config loaded from /mosquitto/config/mosquitto.conf.
+2022-10-21T15:12:47: Opening ipv4 listen socket on port 1883.
+2022-10-21T15:12:47: Opening ipv6 listen socket on port 1883.
+2022-10-21T15:12:47: Opening ipv4 listen socket on port 1884.
+2022-10-21T15:12:47: Opening ipv6 listen socket on port 1884.
+2022-10-21T15:12:47: mosquitto version 2.0.15 running
+2022-10-21T15:12:51: New connection from 172.21.0.3:40871 on port 1883.
+2022-10-21T15:12:51: New client connected from 172.21.0.3:40871 as pyde1-visualizer@dc317d16507f[126] (p5, c1, k60, u'pyde1-visualizer').
+2022-10-21T15:12:51: No will message specified.
+2022-10-21T15:12:51: Sending CONNACK to pyde1-visualizer@dc317d16507f[126] (0, 0)
+2022-10-21T15:12:51: Received SUBSCRIBE from pyde1-visualizer@dc317d16507f[126]
+2022-10-21T15:12:51: 	pyDE1/StateUpdate (QoS 0)
+2022-10-21T15:12:51: pyde1-visualizer@dc317d16507f[126] 0 pyDE1/StateUpdate
+2022-10-21T15:12:51: Sending SUBACK to pyde1-visualizer@dc317d16507f[126]
+2022-10-21T15:12:51: Received SUBSCRIBE from pyde1-visualizer@dc317d16507f[126]
+2022-10-21T15:12:51: 	pyDE1/SequencerGateNotification (QoS 0)
+2022-10-21T15:12:51: pyde1-visualizer@dc317d16507f[126] 0 pyDE1/SequencerGateNotification
+2022-10-21T15:12:51: Sending SUBACK to pyde1-visualizer@dc317d16507f[126]
+2022-10-21T15:12:52: New connection from 172.21.0.3:60601 on port 1883.
+2022-10-21T15:12:52: New client connected from 172.21.0.3:60601 as pyde1@dc317d16507f[139] (p5, c1, k60, u'pyde1').
+2022-10-21T15:12:52: Will message specified (4 bytes) (r1, q0).
+2022-10-21T15:12:52: 	pyDE1/status/mqtt/notification
+2022-10-21T15:12:52: Sending CONNACK to pyde1@dc317d16507f[139] (0, 0)
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[139] (d0, q0, r1, m0, 'pyDE1/status/mqtt/notification', ... (4 bytes))
+2022-10-21T15:12:52: New connection from 172.21.0.3:49843 on port 1883.
+2022-10-21T15:12:52: New client connected from 172.21.0.3:49843 as pyde1@dc317d16507f[138] (p5, c1, k60, u'pyde1').
+2022-10-21T15:12:52: Will message specified (4 bytes) (r1, q0).
+2022-10-21T15:12:52: 	pyDE1/status/mqtt/logging
+2022-10-21T15:12:52: Sending CONNACK to pyde1@dc317d16507f[138] (0, 0)
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r1, m0, 'pyDE1/status/mqtt/logging', ... (4 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log', ... (110 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log/record', ... (339 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log', ... (80 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log/record', ... (309 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log', ... (86 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log/record', ... (314 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log', ... (85 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log/record', ... (315 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log', ... (81 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log/record', ... (310 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log', ... (79 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log/record', ... (309 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log', ... (79 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log/record', ... (308 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log', ... (78 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log/record', ... (308 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log', ... (78 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log/record', ... (308 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log', ... (75 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log/record', ... (305 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log', ... (81 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log/record', ... (311 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log', ... (81 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log/record', ... (311 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log', ... (81 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log/record', ... (311 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log', ... (86 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log/record', ... (315 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log', ... (85 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log/record', ... (315 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log', ... (89 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log/record', ... (319 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log', ... (91 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log/record', ... (321 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log', ... (88 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log/record', ... (317 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log', ... (90 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log/record', ... (320 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log', ... (89 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log/record', ... (319 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log', ... (86 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log/record', ... (316 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log', ... (88 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log/record', ... (318 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log', ... (80 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log/record', ... (309 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log', ... (120 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log/record', ... (352 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log', ... (82 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log/record', ... (312 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log', ... (83 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log/record', ... (313 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log', ... (90 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log/record', ... (320 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log', ... (109 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log/record', ... (338 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log', ... (110 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log/record', ... (326 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log', ... (95 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log/record', ... (310 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log', ... (132 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log/record', ... (348 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log', ... (112 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log/record', ... (328 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log', ... (195 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r0, m0, 'pyDE1/log/record', ... (411 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[139] (d0, q0, r0, m0, 'pyDE1/ConnectivityChange', ... (221 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[139] (d0, q0, r0, m0, 'pyDE1/ConnectivityChange', ... (223 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[139] (d0, q0, r0, m0, 'pyDE1/ConnectivityChange', ... (223 bytes))
+2022-10-21T15:12:52: Received PUBLISH from pyde1@dc317d16507f[139] (d0, q0, r0, m0, 'pyDE1/ConnectivityChange', ... (225 bytes))
+2022-10-21T15:12:59: New connection from 10.32.0.16:61219 on port 1883.
+2022-10-21T15:12:59: New client connected from 10.32.0.16:61219 as pyde12222 (p2, c1, k60, u'pyde1').
+2022-10-21T15:12:59: No will message specified.
+2022-10-21T15:12:59: Sending CONNACK to pyde12222 (0, 0)
+2022-10-21T15:12:59: Received SUBSCRIBE from pyde12222
+2022-10-21T15:12:59: 	pyDE1/# (QoS 0)
+2022-10-21T15:12:59: pyde12222 0 pyDE1/#
+2022-10-21T15:12:59: Sending SUBACK to pyde12222
+2022-10-21T15:12:59: Sending PUBLISH to pyde12222 (d0, q0, r1, m0, 'pyDE1/status/mqtt/notification', ... (4 bytes))
+2022-10-21T15:12:59: Sending PUBLISH to pyde12222 (d0, q0, r1, m0, 'pyDE1/status/mqtt/logging', ... (4 bytes))
+2022-10-21T15:12:59: Received SUBSCRIBE from pyde12222
+2022-10-21T15:12:59: 	pyDE1 (QoS 0)
+2022-10-21T15:12:59: pyde12222 0 pyDE1
+2022-10-21T15:12:59: Sending SUBACK to pyde12222
+2022-10-21T15:13:52: Received PINGREQ from pyde1-visualizer@dc317d16507f[126]
+2022-10-21T15:13:52: Sending PINGRESP to pyde1-visualizer@dc317d16507f[126]
+2022-10-21T15:13:52: Received PINGREQ from pyde1@dc317d16507f[138]
+2022-10-21T15:13:52: Sending PINGRESP to pyde1@dc317d16507f[138]
+2022-10-21T15:13:52: Received PINGREQ from pyde1@dc317d16507f[139]
+2022-10-21T15:13:52: Sending PINGRESP to pyde1@dc317d16507f[139]
+2022-10-21T15:13:59: Received PINGREQ from pyde12222
+2022-10-21T15:13:59: Sending PINGRESP to pyde12222
+2022-10-21T15:14:52: Received PINGREQ from pyde1-visualizer@dc317d16507f[126]
+2022-10-21T15:14:52: Sending PINGRESP to pyde1-visualizer@dc317d16507f[126]
+2022-10-21T15:14:52: Received PINGREQ from pyde1@dc317d16507f[138]
+2022-10-21T15:14:52: Sending PINGRESP to pyde1@dc317d16507f[138]
+2022-10-21T15:14:53: Received PINGREQ from pyde1@dc317d16507f[139]
+2022-10-21T15:14:53: Sending PINGRESP to pyde1@dc317d16507f[139]
+2022-10-21T15:14:59: Received PINGREQ from pyde12222
+2022-10-21T15:14:59: Sending PINGRESP to pyde12222
+2022-10-21T15:15:52: Received PINGREQ from pyde1-visualizer@dc317d16507f[126]
+2022-10-21T15:15:52: Sending PINGRESP to pyde1-visualizer@dc317d16507f[126]
+2022-10-21T15:15:52: Received PINGREQ from pyde1@dc317d16507f[138]
+2022-10-21T15:15:52: Sending PINGRESP to pyde1@dc317d16507f[138]
+2022-10-21T15:15:53: Received PINGREQ from pyde1@dc317d16507f[139]
+2022-10-21T15:15:53: Sending PINGRESP to pyde1@dc317d16507f[139]
+2022-10-21T15:15:59: Received PINGREQ from pyde12222
+2022-10-21T15:15:59: Sending PINGRESP to pyde12222
+2022-10-21T15:16:44: Received DISCONNECT from pyde1-visualizer@dc317d16507f[126]
+2022-10-21T15:16:44: Client pyde1-visualizer@dc317d16507f[126] disconnected.
+2022-10-21T15:16:44: Received PUBLISH from pyde1@dc317d16507f[138] (d0, q0, r1, m0, 'pyDE1/status/mqtt/logging', ... (4 bytes))
+2022-10-21T15:16:44: Sending PUBLISH to pyde12222 (d0, q0, r0, m0, 'pyDE1/status/mqtt/logging', ... (4 bytes))
+2022-10-21T15:16:44: Received DISCONNECT from pyde1@dc317d16507f[138]
+2022-10-21T15:16:44: Client pyde1@dc317d16507f[138] disconnected.
+2022-10-21T15:16:44: Received PUBLISH from pyde1@dc317d16507f[139] (d0, q0, r1, m0, 'pyDE1/status/mqtt/notification', ... (4 bytes))
+2022-10-21T15:16:44: Sending PUBLISH to pyde12222 (d0, q0, r0, m0, 'pyDE1/status/mqtt/notification', ... (4 bytes))
+2022-10-21T15:16:44: Received DISCONNECT from pyde1@dc317d16507f[139]
+2022-10-21T15:16:44: Client pyde1@dc317d16507f[139] disconnected.
+2022-10-21T15:16:49: mosquitto version 2.0.15 terminating
