@@ -13,7 +13,6 @@ A lot of credit to [jeffsf](https://github.com/jeffsf/pyDE1) and [tobbenb](https
  1. Check why pyde1 mqtt user gets DENIED when writing to pyDE1/#
  2. Is bluetooth even working ?
  3. Check nginx and pyde1 container to share data
- 4. Why is pyde1 still exposing port 80 & 443 ?
 
  ..
 
